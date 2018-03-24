@@ -61,7 +61,7 @@ function setGameElements() {
         break;
     
         case 'ended':
-            newGameBtn.innerText = 'Jeszcze raz';
+            newGameBtn.innerText = 'Play again';
             winnerElem.style.display = 'block';   //display winner
     
         case 'notStarted':
