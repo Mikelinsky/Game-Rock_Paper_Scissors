@@ -1,5 +1,5 @@
 {
-  "name": "Module-8",
+  "name": " ",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,9 +16,7 @@
     "build:clean": "rimraf css/*.css css/*.map",
     "build:sass": "sass --sourcemap=none --update sass:css",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
-    "watch": "parallelshell \"npm run watch:sass\" \"npm run watch:autoprefixer\" \"npm run watch:browsersync\" ",
-    "watch:sass": "sass --watch sass:css",
-    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
+    "watch": "npm run watch:browsersync",
     "watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\" \"js/*.js\" "
   },
   "keywords": [],

@@ -1,6 +1,8 @@
 /* ----------------------------------------------------------------
                     GET ELEMENTS 
 ---------------------------------------------------------*/
+//              tip
+var tipElem = document.getElementById('js-tip');
 //              new game button
 var newGameBtn = document.getElementById('js-newGameButton');
 //              player choice 
@@ -57,7 +59,8 @@ function setGameElements() {
             newGameElem.style.display = 'none';
             pickElem.style.display = 'block';
             resultsElem.style.display = 'block';
-            winnerElem.style.display = 'none'
+            winnerElem.style.display = 'none';
+            hideTip();
         break;
     
         case 'ended':
@@ -86,15 +89,29 @@ function newGame() {
     playerResultElem.innerHTML = 'Player Score';
     computerResultElem.innerHTML = 'Computer Score';
     
-    if (player.name) {
-        player.score = computer.score = 0;
-        gameState = 'started';
-        setGameElements();
-    
-        playerNameElem.innerHTML = player.name;
-        setGamePoints();
-    }
+    if (player.name === 'Player name') {
+        console.log('Game not started, wrong player name.');
+        displayTip();
+    } else if (player.name) {
+            player.score = computer.score = 0;
+            gameState = 'started';
+            setGameElements();
+        
+            playerNameElem.innerHTML = player.name;
+            setGamePoints();
+        }
 }
+/*------------------------------------------------------------------
+            DISPLAY TIP
+-----------------------------------------------------------*/
+function hideTip() {
+    tipElem.style.display = 'none';
+}
+function displayTip() {
+    tipElem.style.display = 'block';
+    setTimeout(hideTip, 5000);
+}
+
 /*----------------------------------------------------------------
                 PLAYER SELECTION
 --------------------------------------------------------*/
@@ -111,7 +128,7 @@ function getComputerPick() {
 
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
-   
+    //      display choice
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
 
@@ -124,7 +141,7 @@ function checkRoundWinner(playerPick, computerPick) {
     playerResultElem.innerHTML = computerResultElem.innerHTML = '';
     var winnerIs = 'player';
 
-    if (playerPick == computerPick) {
+    if (playerPick === computerPick) {
         winnerIs = 'noone'; // remis
         playerResultElem.innerHTML = computerResultElem.innerHTML = 'Draw';
     } else if (
