@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Rock Paper Scissors</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
-    <body>
-<!-- -----------------------------------------------------------------
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- -----------------------------------------------------------------
             TIP
-------------------------------------------------------------- -->        
+------------------------------------------------------------- -->
         <div id="js-tip" class="container">
             <div class="row text-center">
                 <h3><span class="label label-warning">Give your name correctly</span></h3>
             </div>
         </div>
-<!-- -----------------------------------------------------
+        <!-- -----------------------------------------------------
                     NEW GAME BUTTON
 --------------------------------------------------------- -->
         <div id="js-newGameElement" class="container">
@@ -23,7 +26,7 @@
                 <button id="js-newGameButton" class="btn btn-default">New game</button>
             </div>
         </div>
-<!-- ----------------------------------------------------------------
+        <!-- ----------------------------------------------------------------
                     GAME TITLE
 --------------------------------------------------------------- -->
         <div class="container">
@@ -34,27 +37,27 @@
                 <span class="label label-danger">Scissors</span>
             </h3>
         </div>
-<!-- ------------------------------------------------------------------
+        <!-- ------------------------------------------------------------------
                     PLAYER CHOICE
 ---------------------------------------------------------------- -->
         <div id="js-playerPickElement" class="container">
-            
+
             <div class="row text-center">
-            <!-- ROCK BUTTON -->
+                <!-- ROCK BUTTON -->
                 <button id="js-playerPick_rock" class="btn">
                     <span class="badge">
                         <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
                     </span>
                     Rock
                 </button>
-            <!-- PAPER BUTTON -->
+                <!-- PAPER BUTTON -->
                 <button id="js-playerPick_paper" class="btn">
                     <span class="badge">
                         <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
                     </span>
                     Paper
                 </button>
-            <!-- SCISSORS BUTTON -->
+                <!-- SCISSORS BUTTON -->
                 <button id="js-playerPick_scissors" class="btn">
                     <span class="badge">
                         <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
@@ -64,11 +67,11 @@
             </div>
 
         </div>
-    <!-- ------------------------------------------------------------
+        <!-- ------------------------------------------------------------
                     SCOREBOARD
 -------------------------------------------------------------- -->
         <div id="js-resultsTableElement" class="container">
-            
+
             <div class="row">
                 <div class="col-xs-5 text-center">
                     <span id="js-playerPoints" class="badge">
@@ -88,7 +91,7 @@
                     Computer
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-xs-5 text-center">
                     <span id="js-playerPick">
@@ -102,7 +105,7 @@
                     </span>
                 </div>
             </div>
-    
+
             <div class="row">
                 <div class="col-xs-5 text-center">
                     <span id="js-playerResult">
@@ -117,12 +120,14 @@
                 </div>
             </div>
         </div>
-<!-- -------------------------------------------------------------------------
+        <!-- -------------------------------------------------------------------------
                             WINNER
 -------------------------------------------------------------------- -->
         <div id="js-winnerElem" class="container">
             <h3 class="text-center">The Winner is:<span id="js-winner" class="label label-success"></span></h3>
         </div>
-        <script src="js/scripts.js"></script>
-    </body>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>

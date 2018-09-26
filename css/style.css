@@ -6,3 +6,16 @@
 #js-winnerElem, #js-tip {
     display: none;
 }
+
+body {
+    background-image: url('../img/WallpaperStudio10-72447.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.game-container {
+
+    margin-top: 10rem;
+    background-color: #243c8dc5;
+}
